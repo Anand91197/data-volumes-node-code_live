@@ -1,0 +1,20 @@
+Build Image: docker build -t 91197/mysite_data_voulme .
+
+
+
+Create/Run Container: docker run -dit -p 80:80 --name mysite_volume_data_cont -v /Users/asaini/Documents/Udemy/data-volume/data-volumes-node-code/feedback:/app/feedback -v "/Users/asaini/Documents/Udemy/data-volume/data-volumes-node-code:/app" -v /app/node_modules 91197/mysite_data_voulme
+
+
+
+>>> Description about above Voulme Parts from the command:
+
+Full code present at path: /Users/asaini/Documents/Udemy/data-volume/data-volumes-node-code/
+
+> /Users/asaini/Documents/Udemy/data-volume/data-volumes-node-code/feedback:/app/feedback  -- Data persist in local feadback as well as in container
+
+
+
+> "/Users/asaini/Documents/Udemy/data-volume/data-volumes-node-code:/app" --- This connect local code with container code inside app directory
+
+
+>  /app/node_modules -- This is allowing to implement changes in live.//
